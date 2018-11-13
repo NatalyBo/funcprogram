@@ -1,0 +1,10 @@
+"3 variant PI- 42"
+(define (rmobject list1 obj)
+  (cond ((null? list1)
+         '())
+        ((equal? obj (car list1))
+         (rmobject (cdr list1) obj))
+        (else
+         (cons (car list1)
+               (rmobject (cdr list1) obj)))))
+               
